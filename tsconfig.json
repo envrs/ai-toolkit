@@ -1,9 +1,6 @@
 {
   "references": [
     {
-      "path": "packages/core/ai"
-    },
-    {
       "path": "packages/core/ai-toolkit"
     },
     {
@@ -28,10 +25,10 @@
       "path": "packages/providers/baseten"
     },
     {
-      "path": "packages/providers/bytedance"
+      "path": "packages/providers/black-forest-labs"
     },
     {
-      "path": "packages/providers/black-forest-labs"
+      "path": "packages/providers/bytedance"
     },
     {
       "path": "packages/providers/cerebras"
@@ -68,6 +65,33 @@
     },
     {
       "path": "packages/providers/groq"
+    },
+    {
+      "path": "packages/providers/harness-acp"
+    },
+    {
+      "path": "packages/providers/harness-claude-code"
+    },
+    {
+      "path": "packages/providers/harness-cline"
+    },
+    {
+      "path": "packages/providers/harness-codex"
+    },
+    {
+      "path": "packages/providers/harness-cursor"
+    },
+    {
+      "path": "packages/providers/harness-grok-build"
+    },
+    {
+      "path": "packages/providers/harness-opencode"
+    },
+    {
+      "path": "packages/providers/harness-pi"
+    },
+    {
+      "path": "packages/providers/harness"
     },
     {
       "path": "packages/providers/huggingface"
@@ -112,6 +136,12 @@
       "path": "packages/adapters/angular"
     },
     {
+      "path": "packages/adapters/langchain"
+    },
+    {
+      "path": "packages/adapters/llamaindex"
+    },
+    {
       "path": "packages/adapters/react"
     },
     {
@@ -122,6 +152,12 @@
     },
     {
       "path": "packages/adapters/vue"
+    },
+    {
+      "path": "packages/special/codemod"
+    },
+    {
+      "path": "packages/special/devtools"
     },
     {
       "path": "packages/special/gateway"
@@ -142,22 +178,13 @@
       "path": "packages/infrastructure/test-server"
     },
     {
-      "path": "packages/special/codemod"
-    },
-    {
-      "path": "packages/special/devtools"
+      "path": "packages/ui/design"
     },
     {
       "path": "packages/ui/elements"
     },
     {
       "path": "packages/ui/shadcn-ui"
-    },
-    {
-      "path": "packages/langchain"
-    },
-    {
-      "path": "packages/llamaindex"
     },
     {
       "path": "packages/mcp"
@@ -221,6 +248,9 @@
     },
     {
       "path": "examples/03-integrations/next-openai-upstash-rate-limits"
+    },
+    {
+      "path": "examples/04-tools/harness-profiles"
     },
     {
       "path": "examples/04-tools/playground"

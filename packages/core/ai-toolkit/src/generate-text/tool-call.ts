@@ -8,6 +8,7 @@ type BaseToolCall = {
   toolCallId: string;
   providerExecuted?: boolean;
   providerMetadata?: ProviderMetadata;
+  toolMetadata?: Record<string, unknown>;
 };
 
 export type StaticToolCall<TOOLS extends ToolSet> = ValueOf<{
@@ -42,4 +43,6 @@ export type DynamicToolCall = BaseToolCall & {
   error?: unknown;
 };
 
-export type TypedToolCall<TOOLS extends ToolSet> = StaticToolCall<TOOLS> | DynamicToolCall;
+export type TypedToolCall<TOOLS extends ToolSet> =
+  | StaticToolCall<TOOLS>
+  | DynamicToolCall;

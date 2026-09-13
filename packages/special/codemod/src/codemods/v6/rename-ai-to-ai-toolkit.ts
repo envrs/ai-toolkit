@@ -1,13 +1,13 @@
 import { createTransformer } from '../lib/create-transformer';
 
 const sourceMapping: Record<string, string> = {
-  ai: '@ai-toolkit/ai',
-  'ai/test': '@ai-toolkit/ai/test',
-  'ai/internal': '@ai-toolkit/ai/internal',
+  ai: 'ai-toolkit',
+  'ai/test': 'ai-toolkit/test',
+  'ai/internal': 'ai-toolkit/internal',
 };
 
 /**
- * Codemod to rename imports from 'ai' to '@ai-toolkit/ai'.
+ * Codemod to rename imports from 'ai' to 'ai-toolkit'.
  * Handles static imports, re-exports, dynamic import() and require() calls.
  */
 export default createTransformer((fileInfo, api, options, context) => {
@@ -71,9 +71,8 @@ export default createTransformer((fileInfo, api, options, context) => {
         (arg.type === 'StringLiteral' || arg.type === 'Literal') &&
         renameSource((arg as { value?: unknown }).value)
       ) {
-        (arg as { value: string }).value = sourceMapping[
-          (arg as { value: string }).value
-        ];
+        (arg as { value: string }).value =
+          sourceMapping[(arg as { value: string }).value];
         context.hasChanges = true;
       }
     });
